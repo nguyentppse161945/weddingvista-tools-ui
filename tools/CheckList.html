@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Planner To-Do List</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .modal {
+      transition: opacity 0.25s ease;
+    }
+    body.modal-active {
+      overflow-x: hidden;
+      overflow-y: visible !important;
+    }
+  </style>
+</head>
+<body class="bg-white">
+  <header class="bg-white shadow w-full">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="font-bold text-xl">Wedding Vista</a>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-gray-900">Plannings tools</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">Venues</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">Vendors</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">Forums</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">Desses</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">Idea</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">Wedding App</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">Ivitations</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">Shop</a>
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-row gap-6">
+            <button>Login</button>
+            <button>Get Started</button>
+          </div>
+          <button>Are you a Vendors ?</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section id="my-wedding" class="shadow-md w-full h-[12rem]">
+    <!-- here the tools bar -->
+    <div class="h-full">
+      <ul class="flex flex-rows items-center justify-center">
+        <li class="m-3 gap-6 h-full mx-8">
+          <a href="/tools/MyWedding.html"
+            class="frame flex flex-col items-center justify-between rounded-lg group "
+          >
+            <svg class="m-2 w-9 h-9" viewBox="0 0 64 61">
+              <path
+                d="M38.46 53.259c1.26.34 2.568.515 3.9.515 8.285 0 15.024-6.76 15.024-15.07s-6.742-15.07-15.024-15.07c-1.331 0-2.638.174-3.898.514a21.647 21.647 0 015.605 14.556 21.653 21.653 0 01-5.607 14.555zm-2.48-28.797l-4.125-3.034a19.469 19.469 0 00-9.426-2.422c-10.825 0-19.635 8.837-19.635 19.698 0 10.859 8.81 19.696 19.635 19.696 3.943 0 7.619-1.173 10.7-3.189l2.854-2.27a19.678 19.678 0 006.084-14.237 19.672 19.672 0 00-6.086-14.242zm-3.584-5.014a21.459 21.459 0 019.965-2.442C54.292 17.006 64 26.74 64 38.704c-.005 11.963-9.71 21.695-21.64 21.695-3.515 0-6.913-.846-9.966-2.441A21.456 21.456 0 0122.43 60.4C10.498 60.4.794 50.666.794 38.704c0-11.964 9.704-21.698 21.635-21.698 3.592 0 6.982.882 9.967 2.442zm2.059 37.284a19.464 19.464 0 007.906 1.667c10.824 0 19.636-8.835 19.64-19.696 0-10.86-8.815-19.697-19.64-19.697-2.76 0-5.44.575-7.906 1.668a21.795 21.795 0 012.404 1.874 16.914 16.914 0 015.5-.914c9.39 0 17.025 7.657 17.025 17.07 0 9.414-7.633 17.07-17.024 17.07-1.894 0-3.746-.312-5.503-.916a21.795 21.795 0 01-2.402 1.874zm-8.125-3.473a21.652 21.652 0 01-5.603-14.556c0-5.46 2.032-10.604 5.602-14.554a14.946 14.946 0 00-3.901-.515c-8.281 0-15.02 6.76-15.02 15.069 0 8.311 6.738 15.07 15.02 15.07 1.349 0 2.657-.178 3.902-.514zm6.065-25.821a15.054 15.054 0 00-5.055 11.265c0 4.367 1.871 8.431 5.055 11.268a15.058 15.058 0 005.057-11.268c0-4.476-1.957-8.503-5.057-11.265zm-1.727 23.661a17.054 17.054 0 01-5.328-12.396 17.05 17.05 0 015.33-12.397l-2.37-1.337a19.658 19.658 0 00-5.573 13.734 19.659 19.659 0 005.596 13.758l2.345-1.362zm-8.24-29.465c9.387 0 17.024 7.657 17.024 17.069 0 9.415-7.633 17.07-17.024 17.07-9.388 0-17.02-7.655-17.02-17.07 0-9.412 7.633-17.069 17.02-17.069zM28.288.797a5.33 5.33 0 013.845 1.634A5.327 5.327 0 0135.978.797a5.352 5.352 0 015.345 5.356 5.32 5.32 0 01-1.52 3.734l-6.941 7.007a1 1 0 01-1.419.002l-7.01-7.032a5.35 5.35 0 01-1.49-3.711A5.352 5.352 0 0128.289.797zm11.035 5.356c0-1.853-1.5-3.356-3.345-3.356a3.34 3.34 0 00-2.96 1.792 1 1 0 01-1.77-.001 3.339 3.339 0 00-2.96-1.79 3.352 3.352 0 00-3.345 3.355c0 .88.338 1.705.92 2.313l6.286 6.305 6.229-6.286c.605-.62.945-1.444.945-2.332z"
+              ></path>
+            </svg>
+            <a href="/tools/MyWedding.html"><p class="hover:text-pink-500">My Wedding</p></a>
+          </a>
+        </li>
+        <li class="m-3 gap-6 h-full mx-8">
+          <a href="/tools/Vendors.html" 
+            class="frame flex flex-col items-center justify-between rounded-lg group "
+          >
+            <svg class="m-2 w-9 h-9  ">
+              <path
+                d="M21.589 16.913V3.087a1.243 1.243 0 00-1.243-1.243H3.796v22.312h16.55a1.243 1.243 0 001.243-1.243v-6zm1-.5H25a.5.5 0 01.5.5v4.31a.5.5 0 01-.5.5h-2.411v1.19a2.243 2.243 0 01-2.243 2.243H2.743A2.243 2.243 0 01.5 22.913V3.087A2.243 2.243 0 012.743.844h17.603a2.243 2.243 0 012.243 2.243v.392H25a.5.5 0 01.5.5v4.31a.5.5 0 01-.5.5h-2.411v1.16H25a.5.5 0 01.5.5v4.31a.5.5 0 01-.5.5h-2.411v1.154zm0 1v3.31H24.5v-3.31h-1.911zm0-3.155H24.5v-3.31h-1.911v3.31zm0-9.779v3.31H24.5v-3.31h-1.911zM2.796 24.156V1.844h-.053c-.687 0-1.243.557-1.243 1.243v19.826a1.243 1.243 0 001.243 1.243h.053zM7.476 6.89a.5.5 0 01.5-.5h9.182a.5.5 0 01.5.5v4.482a.5.5 0 01-.5.5H7.976a.5.5 0 01-.5-.5V6.89zm1 3.982h8.182V7.39H8.476v3.482z"
+                fill-rule="nonzero"
+              ></path>
+            </svg>
+            <a class="group-hover:text-white" href="/tools/Vendors.html" ><p class="hover:text-pink-500">Vendor Manager</p></a>
+            
+          </a>
+        </li>
+      
+        <li class="m-3 gap-6 h-full mx-8">
+          <a href="/tools/MyBudget.html"
+            class="frame flex flex-col items-center justify-between rounded-lg group "
+          >
+            <svg class="m-2 w-9 h-9" viewBox="0 0 24 24">
+              <path
+                d="M6.957 18.25l1.397 1.396a.5.5 0 01-.708.708L6.25 18.957l-1.396 1.397a.5.5 0 01-.708-.708l1.397-1.396-1.397-1.396a.5.5 0 01.708-.708l1.396 1.397 1.396-1.397a.5.5 0 01.708.708L6.957 18.25zM6.5 6h2a.5.5 0 110 1h-2v2a.5.5 0 11-1 0V7h-2a.5.5 0 010-1h2V4a.5.5 0 011 0v2zm6-5v11H23V2.172C23 1.525 22.475 1 21.828 1H12.5zm-1 0H2.172C1.525 1 1 1.525 1 2.172V12h10.5V1zm1 22h9.328c.647 0 1.172-.525 1.172-1.172V13H12.5v10zm-1 0V13H1v8.828C1 22.475 1.525 23 2.172 23H11.5zM2.172 0h19.656C23.028 0 24 .972 24 2.172v19.656c0 1.2-.972 2.172-2.172 2.172H2.172C.972 24 0 23.028 0 21.828V2.172C0 .972.972 0 2.172 0zM15.5 7a.5.5 0 110-1h5a.5.5 0 110 1h-5zm0 10a.5.5 0 110-1h5a.5.5 0 110 1h-5zm0 3a.5.5 0 110-1h5a.5.5 0 110 1h-5z"
+                fill-rule="nonzero"
+              ></path>
+            </svg>
+            <a href="/tools/MyBudget.html"><p class="hover:text-pink-500">My Budget</p></a>
+          </a>
+        </li>
+
+        <li class="m-3 gap-6 h-full mx-8">
+          <a href="/tools/CheckList.html"
+            class="frame flex flex-col items-center justify-between rounded-lg group "
+          >
+          <svg  class="m-2 w-9 h-9" viewBox="0 0 21 27"><path d="M13.78 3.375h2.47a.5.5 0 01.5.5v.965h3.062c.634 0 1.15.514 1.15 1.148v19.796c0 .635-.516 1.149-1.15 1.149H1.87c-.635 0-1.15-.514-1.15-1.149V5.988c0-.634.515-1.148 1.15-1.148h3.056v-.965a.5.5 0 01.5-.5h2.47a2.96 2.96 0 015.884 0zm-.971.428a.502.502 0 01-.01-.1c0-1.08-.878-1.957-1.96-1.957-1.083 0-1.96.876-1.96 1.957a.504.504 0 01-.005.072.502.502 0 01-.49.6H5.927v2.057h9.823V4.375h-2.447a.5.5 0 01-.494-.572zM16.75 5.84v1.092a.5.5 0 01-.5.5H5.427a.5.5 0 01-.5-.5V5.84H1.871a.149.149 0 00-.15.148v19.796c0 .082.067.149.15.149h17.94c.083 0 .15-.067.15-.149V5.988a.149.149 0 00-.15-.148h-3.06zm-6.425 7.373a.5.5 0 010-1h6.534a.5.5 0 110 1h-6.534zm0 8.518a.5.5 0 110-1h6.534a.5.5 0 110 1h-6.534zm0-4.259a.5.5 0 110-1h6.534a.5.5 0 110 1h-6.534zm-3.943.532a1.264 1.264 0 11-.001-2.527 1.264 1.264 0 010 2.527zm0 4.93a1.264 1.264 0 11-.001-2.528 1.264 1.264 0 010 2.528zM5.265 10.899l.876.879 2.234-2.232a.5.5 0 11.707.708l-2.588 2.585a.5.5 0 01-.707 0l-1.23-1.234a.5.5 0 01.708-.706z" fill-rule="nonzero"></path></svg>
+            <a href="/tools/CheckList.html"><p class="hover:text-pink-500">Check List</p></a>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- begin here check list -->
+  <div class="container mx-auto p-4">
+    <div class="flex flex-col md:flex-row">
+      <!-- Left Side -->
+      <div class="md:w-1/3 p-4">
+        <h2 class="text-xl font-bold mb-4">Checklist</h2>
+        <div class="mb-4">
+          <h3 class="font-semibold">Your Search</h3>
+          <div class="mt-2">
+            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:text-white hover:bg-yellow-500" onclick="filterTasks('todo')">To Do</button>
+            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:text-white hover:bg-green-500" onclick="filterTasks('done')">Done</button>
+          </div>
+        </div>
+        <div class="mb-4">
+          <h3 class="font-semibold">Status</h3>
+          <ul class="mt-2 space-y-1">
+            <li class="flex items-center">
+              <span class="bg-yellow-500 h-2 w-2 rounded-full inline-block mr-2"></span> To Do
+            </li>
+            <li class="flex items-center">
+              <span class="bg-green-500 h-2 w-2 rounded-full inline-block mr-2"></span> Done
+            </li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <h3 class="font-semibold">By Date</h3>
+          <ul class="mt-2 space-y-1">
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('overdue')">Overdue</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('currentMonth')">Current Month</li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <h3 class="font-semibold">By Category</h3>
+          <ul class="mt-2 space-y-1">
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Accommodations')">Accommodations</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Budget')">Budget</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Dress')">Dress and Attire</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Engagement')">Engagement</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Guests')">Guests</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Honeymoon')">Honeymoon</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Invitations')">Invitations</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Jewelry')">Jewelry</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Legal')">Legal</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Planning')">Planning</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Registry')">Registry</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Rehearsal')">Rehearsal</li>
+            <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Other')">Other</li>
+     
+          </ul>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="md:w-2/3 p-4">
+        <div class="flex justify-between items-center mb-4">
+          <div>
+            <p>You have completed <span class="font-bold">0 out of 81</span> tasks</p>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+              <div class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+            </div>
+          </div>
+          <button class="ml-2 text-white bg-red-300 hover:bg-red-400 rounded-md px-4 py-2 transform transition-transform duration-200 hover:scale-105" onclick="openModal()">Add a new task</button>
+          
+        
+        </div>
+        
+        <h3 class="font-semibold mb-4">Tasks</h3>
+        <ul id="taskList" class="space-y-2 border-2 bg-gray-100 py-2 px-2 rounded-md">
+          <!-- Example tasks with data attributes -->
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-06-01" data-status="To Do" data-category="Engagement" >
+            <div>
+              <h4 class="font-bold">Announce your engagement <span>🎉</span></h4>
+              <p class="text-sm text-red-500">2024-06-01</p>
+              <p class="text-sm text-gray-500">Engagement</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-06-07" data-status="To Do" data-category="Engagement">
+            <div>
+              <h4 class="font-bold">Plan your engagement party <span>🎉</span></h4>
+              <p class="text-sm text-red-500">2024-06-07</p>
+              <p class="text-sm text-gray-500">Engagement</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+          <!-- Additional tasks -->
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-06-10" data-status="To Do" data-category="Accommodations">
+            <div>
+              <h4 class="font-bold">Book a venue</h4>
+              <p class="text-sm text-red-500">2024-06-10</p>
+              <p class="text-sm text-gray-500">Accommodations</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-06-15" data-status="To Do" data-category="Guests">
+            <div>
+              <h4 class="font-bold">Send save-the-dates</h4>
+              <p class="text-sm text-red-500">2024-06-15</p>
+              <p class="text-sm text-gray-500">Guests</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-06-20" data-status="To Do" data-category="Budget">
+            <div>
+              <h4 class="font-bold">Hire a caterer</h4>
+              <p class="text-sm text-red-500">2024-06-20</p>
+              <p class="text-sm text-gray-500">Budget</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-06-25" data-status="To Do" data-category="Dress">
+            <div>
+              <h4 class="font-bold">Choose your wedding dress</h4>
+              <p class="text-sm text-red-500">2024-06-25</p>
+              <p class="text-sm text-gray-500">Dress</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-05-01" data-status="To Do" data-category="Guests">
+            <div>
+              <h4 class="font-bold">Send invitations</h4>
+              <p class="text-sm text-red-500">2024-05-01</p>
+              <p class="text-sm text-gray-500">Guests</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-07-01" data-status="To Do" data-category="Accommodations">
+            <div>
+              <h4 class="font-bold">Arrange transportation</h4>
+              <p class="text-sm text-red-500">2024-07-01</p>
+              <p class="text-sm text-gray-500">Accommodations</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-08-01" data-status="To Do" data-category="Budget">
+            <div>
+              <h4 class="font-bold">Finalize menu</h4>
+              <p class="text-sm text-red-500">2024-08-01</p>
+              <p class="text-sm text-gray-500">Budget</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-09-01" data-status="To Do" data-category="Engagement">
+            <div>
+              <h4 class="font-bold">Book a photographer</h4>
+              <p class="text-sm text-red-500">2024-09-01</p>
+              <p class="text-sm text-gray-500">Engagement</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+          <li class="hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between" data-date="2024-10-01" data-status="To Do" data-category="Accommodations">
+            <div>
+              <h4 class="font-bold">Plan the honeymoon</h4>
+              <p class="text-sm text-red-500">2024-10-01</p>
+              <p class="text-sm text-gray-500">Accommodations</p>
+              <p class="text-sm text-yellow-500">To Do</p>
+            </div>
+            <div>
+              <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">Done</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="taskModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden modal">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
+      <h2 class="text-xl font-bold mb-4">Add New Task</h2>
+      <input type="text" id="taskTitle" class="border border-gray-300 p-2 w-full mb-4" placeholder="Enter task title">
+      <input type="text" id="taskSummary" class="border border-gray-300 p-2 w-full mb-4" placeholder="Enter task summary">
+      <input type="date" id="taskDate" class="border border-gray-300 p-2 w-full mb-4">
+      <select id="taskStatus" class="border border-gray-300 p-2 w-full mb-4">
+        <option value="To Do">To Do</option>
+        <option value="Done">Done</option>
+      </select>
+      <select id="taskCategory" class="border border-gray-300 p-2 w-full mb-4">
+        <option value="Accommodations">Accommodations</option>
+        <option value="Budget">Budget</option>
+        <option value="DressAndAttire">Dress and Attire</option>
+        <option value="Engagement">Engagement</option>
+        <option value="Guests">Guests</option>
+        <option value="Honeymoon">Honeymoon</option>
+        <option value="Invitations">Invitations</option>
+        <option value="Jewelry">Jewelry</option>
+        <option value="Legal">Legal</option>
+        <option value="Other">Other</option>
+        <option value="Planning">Planning</option>
+        <option value="Registry">Registry</option>
+        <option value="Rehearsal">Rehearsal</option>
+      </select>
+      <div class="flex justify-end">
+        <button class="bg-red-500 text-white px-4 py-2 rounded mr-2" onclick="closeModal()">Cancel</button>
+        <button class="bg-green-500 text-white px-4 py-2 rounded" onclick="addTask()">Add Task</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const taskModal = document.getElementById('taskModal');
+    const taskList = document.getElementById('taskList');
+    const taskTitle = document.getElementById('taskTitle');
+    const taskSummary = document.getElementById('taskSummary');
+    const taskDate = document.getElementById('taskDate');
+    const taskStatus = document.getElementById('taskStatus');
+    const taskCategory = document.getElementById('taskCategory');
+
+    function openModal() {
+      taskModal.classList.remove('hidden');
+      document.body.classList.add('modal-active');
+    }
+
+    function closeModal() {
+      taskModal.classList.add('hidden');
+      document.body.classList.remove('modal-active');
+    }
+
+     function toggleStatus(button) {
+      if (button.textContent.trim() === 'Done') {
+        button.textContent = 'To Do';
+        button.classList.remove('bg-green-500');
+        button.classList.add('bg-yellow-500');
+      } else {
+        button.textContent = 'Done';
+        button.classList.remove('bg-yellow-500');
+        button.classList.add('bg-green-500');
+      }
+    }
+    function addTask() {
+      const title = taskTitle.value.trim();
+      const summary = taskSummary.value.trim();
+      const date = taskDate.value;
+      const status = taskStatus.value;
+      const category = taskCategory.value;
+
+      if (title !== '' && summary !== '' && date !== '') {
+        const li = document.createElement('li');
+        li.className = 'hover:bg-gray-100 bg-white p-4 rounded-lg shadow-md flex items-center justify-between';
+        li.setAttribute('data-date', date);
+        li.setAttribute('data-status', status);
+        li.setAttribute('data-category',category)
+        li.innerHTML = `
+          <div>
+            <h4 class="font-bold">${title}</h4>
+            <p class="text-sm text-red-500">${date}</p>
+            <p class="text-sm text-gray-500">${category}</p>
+            <p class="text-sm ${status === 'Done' ? 'text-green-500' : 'text-yellow-500'}">${status}</p>
+          
+          </div>
+          <div>
+            <button class="bg-green-500 text-white px-2 py-1 rounded mr-2" onclick="toggleStatus(this)">${status === 'Done' ? 'To Do' : 'Done'}</button>
+           
+            <button class="bg-red-500 text-white px-2 py-1 rounded" onclick="removeTask(this)">Remove</button>
+          </div>
+        `;
+        taskList.appendChild(li);
+        taskTitle.value = '';
+        taskSummary.value = '';
+        taskDate.value = '';
+        taskStatus.value = 'To Do';
+
+        closeModal();
+      }
+    }
+
+    function removeTask(button) {
+      const li = button.parentElement.parentElement;
+      taskList.removeChild(li);
+    }
+
+    function toggleStatus(button) {
+  const taskItem = button.closest('li');
+  const status = taskItem.getAttribute('data-status');
+  
+  if (status === 'To Do') {
+    taskItem.setAttribute('data-status', 'Done');
+    taskItem.classList.remove('bg-white');
+    taskItem.classList.add('bg-green-100');
+    button.textContent = 'Undo';
+  } else {
+    taskItem.setAttribute('data-status', 'To Do');
+    taskItem.classList.remove('bg-green-100');
+    taskItem.classList.add('bg-white');
+    button.textContent = 'Done';
+  }
+}
+
+    function filterTasks(filter) {
+      const tasks = taskList.querySelectorAll('li');
+      const now = new Date();
+      const currentMonth = now.getMonth() + 1; // JavaScript months are 0-11
+      const currentYear = now.getFullYear();
+
+      tasks.forEach(task => {
+        const taskDate = new Date(task.getAttribute('data-date'));
+        const taskMonth = taskDate.getMonth() + 1;
+        const taskYear = taskDate.getFullYear();
+        const status = task.getAttribute('data-status');
+        const category = task.getAttribute('data-category');
+
+        let isVisible = false;
+
+        if (filter === 'todo' && status === 'To Do') {
+          isVisible = true;
+        } else if (filter === 'done' && status === 'Done') {
+            isVisible = true;
+        }else if (filter === 'Accommodations' && category === 'Accommodations') {
+            isVisible = true;
+        } else if (filter === 'Budget' && category === 'Budget') {
+            isVisible = true;
+        } else if (filter === 'Dress' && category === 'Dress') {
+            isVisible = true;
+        } else if (filter === 'Engagement' && category === 'Engagement') {
+            isVisible = true;
+        }  
+         else if (filter === 'Guest' && category === 'Guest') {
+            isVisible = true;
+        }  
+         else if (filter === 'Honeymoon' && category === 'Honeymoon') {
+            isVisible = true;
+        }  
+         else if (filter === 'Invitations' && category === 'Invitations') {
+            isVisible = true;
+        }  
+         else if (filter === 'Jewelry' && category === 'Jewelry') {
+            isVisible = true;
+        }  
+         else if (filter === 'Legal' && category === 'Legal') {
+            isVisible = true;
+        }  
+         else if (filter === 'Planning' && category === 'Planning') {
+            isVisible = true;
+        }  
+         else if (filter === 'Registry' && category === 'Registry') {
+            isVisible = true;
+        }  
+         else if (filter === 'Rehearsal' && category === 'Rehearsal') {
+            isVisible = true;
+        }  
+         else if (filter === 'Other' && category === 'Other') {
+            isVisible = true;
+        }  
+        else if (filter === 'overdue' && taskDate < now) {
+          isVisible = true;
+        } else if (filter === 'currentMonth' && taskMonth === currentMonth && taskYear === currentYear) {
+          isVisible = true;
+        }
+
+        if (isVisible) {
+          task.style.display = 'block';
+        } else {
+          task.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
