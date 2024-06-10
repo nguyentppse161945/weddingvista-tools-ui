@@ -129,9 +129,10 @@
             <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('currentMonth')">Current Month</li>
           </ul>
         </div>
-        <div class="mb-4">
+        <div class="mb-4 md:block">
           <h3 class="font-semibold">By Category</h3>
-          <ul class="mt-2 space-y-1">
+          
+          <ul id="categoryDropdown" class="hidden mt-2 space-y-1 ">
             <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Accommodations')">Accommodations</li>
             <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Budget')">Budget</li>
             <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Dress')">Dress and Attire</li>
@@ -145,10 +146,10 @@
             <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Registry')">Registry</li>
             <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Rehearsal')">Rehearsal</li>
             <li class="hover:text-white hover:bg-gray-300" onclick="filterTasks('Other')">Other</li>
-     
-          </ul>
           </ul>
         </div>
+        
+        
       </div>
 
       <!-- Right Side -->
@@ -340,6 +341,10 @@
   </div>
 
   <script>
+    function toggleCategoryDropdown() {
+  var dropdown = document.getElementById("categoryDropdown");
+  dropdown.classList.toggle("hidden");
+}
     const taskModal = document.getElementById('taskModal');
     const taskList = document.getElementById('taskList');
     const taskTitle = document.getElementById('taskTitle');
@@ -496,6 +501,7 @@
         }
       });
     }
+  
   </script>
 </body>
 </html>
